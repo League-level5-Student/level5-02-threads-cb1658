@@ -1,5 +1,7 @@
 package _06_Wait_and_Notify.Example;
 
+import java.util.Random;
+
 public class WaitAndNotifyExample {
 	/*
 		 Run the code below. How is the output? You'll most likely notice that 
@@ -16,7 +18,6 @@ public class WaitAndNotifyExample {
 		 Ask your teacher for more clarification if needed.
 	 
 	 */
-	
 	
 	public static void main(String[] args) {
 		Thread s1 = new Thread(new ThreadPrinter());

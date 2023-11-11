@@ -18,11 +18,11 @@ public class AdvancedRobotRace {
 		Robot r4 = new Robot(900,900);
 		Robot r5 = new Robot(1100,900);
 		
-		r1.setSpeed(2);
-		r2.setSpeed(2);
-		r3.setSpeed(2);
-		r4.setSpeed(2);
-		r5.setSpeed(2);
+		r1.setSpeed(15);
+		r2.setSpeed(15);
+		r3.setSpeed(15);
+		r4.setSpeed(15);
+		r5.setSpeed(15);
 		
 		Robot[] robarr = {r1,r2,r3,r4,r5};
 		
@@ -51,10 +51,12 @@ public class AdvancedRobotRace {
 	public static void robCommand(Robot robot) {
 		while(robot.getY() > 0) {
 			
-			int a = new Random().nextInt(100)-40;
-			int b = new Random().nextInt(360)-180;
+			int a = new Random().nextInt(150)-70;
+			int b = new Random().nextInt(30)-15;
 			
-			int c = new Random().nextInt(100);
+			int c = new Random().nextInt(254);
+			int d = new Random().nextInt(50);
+			int e = new Random().nextInt(50);
 			
 			if(robot.getY() - a < 0) {
 				System.out.println(robot.toString() + " is the winner!!!!!");
@@ -65,6 +67,7 @@ public class AdvancedRobotRace {
 			robot.turn(b);
 			
 			
+			robot.setWindowColor(c,d,e);
 		}
 	}
 	

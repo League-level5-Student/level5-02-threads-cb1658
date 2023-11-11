@@ -21,6 +21,21 @@ public class SynchronizedSwimming {
 		Swimmer b = new Swimmer("Sally");
 		a.start();
 		b.start();
+		
+		try {
+			swimLap(a);
+			
+			//Thread.sleep(2000);
+			
+			swimLap(b);
+			
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 	/*
@@ -36,7 +51,7 @@ public class SynchronizedSwimming {
 	public static void takeTurn(Swimmer swimmer) {
 		try {
 			swimLap(swimmer);
-			Thread.sleep(100);
+			//Thread.sleep(100);
 		} catch (InterruptedException ignore) {
 		}
 	}

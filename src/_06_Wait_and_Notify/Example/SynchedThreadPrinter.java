@@ -9,6 +9,8 @@ public class SynchedThreadPrinter implements Runnable{
 		thread = totalThreads;
 	}
 	
+	
+	
 	@Override
 	public void run() {
 		synchronized(threadLock) { //locks this block of code if another thread is using threadLock
