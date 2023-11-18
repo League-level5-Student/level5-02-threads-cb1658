@@ -36,7 +36,10 @@ public class SynchedSplitLoops {
 		
 		try {
 			t1.join();
+			t1.notify();
+			t2.wait();
 			t2.join();
+			t2.wait();
 		} catch (InterruptedException e) {
 			System.err.println("Could not join threads");
 		}
